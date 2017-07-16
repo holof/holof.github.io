@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pool Party</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      function openThanks()
+      {
+          window.open("thanks.html", "_blank", "height=500,width=500"); // öppnar thanks.html i ett fönster som är 500x500px
+      }
+    </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function(){
+        $('#image-slider img:gt(0)').hide();
+        setInterval(function(){
+          $('#image-slider :first-child').fadeOut()
+             .next('img').fadeIn()
+             .end().appendTo('#image-slider');}, 
+          3000);
+        });
+      </script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+      <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="rooms-packages.html">ROOMS & PACKAGES</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">
+
+      <div id="image-slider">
+          <img src="images/spa.jpg">
+          <img src="images/angaga.jpg">
+          <img src="images/turtle.jpg">
+          <img src="images/mexico.jpg">
+          <img src="images/room.jpg">
+          <img src="images/praslin.jpg">
+          <img src="images/maldiverna.jpg">
+      </div>
+
+      <main>
+        <article>
+          <h2>
+            CONTACT
+          </h2>
+          
+          <form onsubmit="return openThanks()"> <!-- när formuläret skickas med submit körs funktionen openThanks -->
+            <p> <!-- använder svenska i texten pga krav så det blir konsekvent: postnummer, personnummer  osv. -->
+            Förnamn:<br>
+            <input type="text" name="firstn" id="fname" pattern="[A-Za-z]" required><br> <!-- krävs stora eller små bokstäver -->
+            Efternamn:<br>
+            <input type="text" name="surn" id="lname" pattern="[A-Za-z]" required><br> <!-- krävs stora eller små bokstäver -->
+            Mejladress:<br>
+            <input type="text" name="email" id="email" pattern="[a-z0-9]+@+[a-z0-9]+\.+[a-z]{2,3}" required><br> <!-- krävs bokstäver eller siffror + snabel-a + bokstäver eller siffror + punkt . två eller tre bokstäver efter punkten -->
+            Adress:<br>
+            <input type="text" name="address" id="address" pattern="[A-Za-z]+(\s?)+([0-9]{1,3})+[A-Za-z]?" required><br> <!-- krävs minst en stor eller liten bokstav + blanksteg(valfritt) + mellan en och tre siffror för gatunr + eventuell gatusiffra(valfritt)-->
+            Postnummer:<br>
+            <input type="text" name="postnr" id="postnr" placeholder="12345" pattern="\d{3}\s?\d{2}" required><br> <!-- krävs fem siffror i rad eller tre siffror + blanksteg(valfritt) + två siffror -->
+            Personnummer:<br>
+            <input type="text" name="personnr" id="personnr" placeholder="ååmmddnnnn" pattern="\d{6}-?\d{4}" required><br> <!-- krävs sex siffror + bindessträck(valfritt) + fyra siffror -->
+            Meddelande:<br>
+            <textarea cols="50" rows="10"></textarea><br>
+            <input type="submit" name="submit">
+            </p>
+          </form>
+
+          <script>
+            
+          </script>
+
+        </article>
+      </main>
+
+      <aside>
+        <div id="package">
+          <h3>
+            PACKAGE DEALS
+          </h3>
+          <ul>
+            <li><img src="images/room1.jpg" alt="room1" />
+              <p>
+                <span>€500 - Package deal 1</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="about.html">READ MORE »</a>
+              </p>
+            </li>
+            <li><img src="images/room2.jpg" alt="room2" />
+              <p>
+                <span>€800 - Package deal 2</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="about.html">READ MORE »</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div id="help">
+          <h3>
+            NEED HELP?
+          </h3>
+          <p>
+            Call this number for customer support:
+            <br>
+            <i>+46 123 456 789</i>
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+    <footer>
+      <div id="footer-wrapper">
+
+        <div id="footer-links">
+          <p>LINKS</p>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div id="footer-contact">
+          <p>CONTACT</p>
+          <ul>
+            <li>Lasarettsvägen 19</li>
+            <li>856 43, Sundsvall</li>
+            <li>Västernorrland, SWEDEN</li>
+            <li>Tel: +46 123 456 789</li>
+          </ul>
+        </div>
+
+        <div id="footer-map">
+          <p>MAP</p>
+          <a target="_blank" href="https://www.google.se/maps/place/Vuxenutbildning+Sundsvall+-+Timr%C3%A5/@62.406771,17.312073,15z/data=!4m5!3m4!1s0x0:0x3e286cfb787c865e!8m2!3d62.406771!4d17.312073"><img src="images/map.png" alt="map"></a>
+        </div>
+
+        <div id="footer-social-media">
+          <p>SOCIAL MEDIA</p>
+          <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+          <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+          <a href="#"><img src="images/youtube.png" alt="youtube"></a>
+          <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+            <div id="footer-copyright">
+            Copyright © 2017 Henning Olofsson
+            </div>
+        </div>
+
+        
+
+      </div>
+    </footer>
+  </body>
+</html>

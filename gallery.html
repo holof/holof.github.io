@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pool Party</title>
+    <meta charset="UTF-8"/>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function(){
+        $('#image-slider img:gt(0)').hide();
+        setInterval(function(){
+          $('#image-slider :first-child').fadeOut()
+             .next('img').fadeIn()
+             .end().appendTo('#image-slider');}, 
+          3000);
+        });
+      </script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+      <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="rooms-packages.html">ROOMS & PACKAGES</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">
+
+      <div id="image-slider">
+          <img src="images/spa.jpg">
+          <img src="images/angaga.jpg">
+          <img src="images/turtle.jpg">
+          <img src="images/mexico.jpg">
+          <img src="images/room.jpg">
+          <img src="images/praslin.jpg">
+          <img src="images/maldiverna.jpg">
+      </div>
+
+      <main>
+        <div id="gallery">
+
+          <h2>GALLERY</h2>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/maldiverna.jpg" alt="maldives" /></a>
+            <i>Maldives</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/1.jpg" alt="swimming pool" /></a>
+            <i>Swimming pool</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/2.jpg" alt="palm tree" /></a>
+            <i>Palm tree</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/3.jpg" alt="beach chair" /></a>
+            <i>Beach chair</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/4.jpg" alt="snorkeling" /></a>
+            <i>Snorkeling</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/5.jpg" alt="beach" /></a>
+            <i>Beach</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/6.jpg" alt="coral" /></a>
+            <i>Coral</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/7.jpg" alt="lagoon" /></a>
+            <i>Lagoon</i>
+          </div>
+
+          <div class="gallery-img-box">
+            <a href="#"><img src="images/8.jpg" alt="coral reef" /></a>
+            <i>Coral reef</i>
+          </div>
+
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis et urna non aliquam. Duis pellentesque arcu ut ex ornare tempus. Praesent id pulvinar sem, nec efficitur mi. Suspendisse vitae erat eget enim mollis rutrum. Pellentesque vehicula condimentum ipsum, ac varius leo hendrerit nec. Phasellus tristique, turpis eu pellentesque viverra, metus nunc fermentum nulla, a vehicula ante libero vitae elit. Integer ex leo, interdum vel lacus in, ornare mollis ipsum. Maecenas in tempus nisi, in volutpat orci. Duis finibus lectus at eleifend tempor. Integer accumsan tellus vel ultricies efficitur.
+          </p>
+
+        </div>
+      </main>
+
+      <aside>
+        <div id="package">
+          <h3>
+            PACKAGE DEALS
+          </h3>
+          <ul>
+            <li><img src="images/room1.jpg" alt="room1" />
+              <p>
+                <span>€500 - Package deal 1</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="about.html">READ MORE »</a>
+              </p>
+            </li>
+            <li><img src="images/room2.jpg" alt="room2" />
+              <p>
+                <span>€800 - Package deal 2</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="about.html">READ MORE »</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div id="help">
+          <h3>
+            NEED HELP?
+          </h3>
+          <p>
+            Call this number for customer support:
+            <br>
+            <i>+46 123 456 789</i>
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+    <footer>
+      <div id="footer-wrapper">
+
+        <div id="footer-links">
+          <p>LINKS</p>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div id="footer-contact">
+          <p>CONTACT</p>
+          <ul>
+            <li>Lasarettsvägen 19</li>
+            <li>856 43, Sundsvall</li>
+            <li>Västernorrland, SWEDEN</li>
+            <li>Tel: +46 123 456 789</li>
+          </ul>
+        </div>
+
+        <div id="footer-map">
+          <p>MAP</p>
+          <a target="_blank" href="https://www.google.se/maps/place/Vuxenutbildning+Sundsvall+-+Timr%C3%A5/@62.406771,17.312073,15z/data=!4m5!3m4!1s0x0:0x3e286cfb787c865e!8m2!3d62.406771!4d17.312073"><img src="images/map.png" alt="map"></a>
+        </div>
+
+        <div id="footer-social-media">
+          <p>SOCIAL MEDIA</p>
+          <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+          <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+          <a href="#"><img src="images/youtube.png" alt="youtube"></a>
+          <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+            <div id="footer-copyright">
+            Copyright © 2017 Henning Olofsson
+            </div>
+        </div>
+
+        
+
+      </div>
+    </footer>
+  </body>
+</html>
