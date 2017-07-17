@@ -15,9 +15,11 @@
         });
       </script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
   </head>
 
   <body>
+
     <header>
       <nav>
       <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
@@ -31,24 +33,101 @@
         </ul>
       </nav>
     </header>
-    <div id="content">
 
-      <div id="image-slider">
+    <div id="content">
+      <div id="image-slider-container">
+        <h1>Welcome to our hotel!</h1>
+        <div id="image-slider">
+          <img src="images/maldiverna.jpg">
+          <img src="images/mexico.jpg">
           <img src="images/spa.jpg">
           <img src="images/angaga.jpg">
           <img src="images/turtle.jpg">
-          <img src="images/mexico.jpg">
           <img src="images/room.jpg">
           <img src="images/praslin.jpg">
-          <img src="images/maldiverna.jpg">
+        </div>
       </div>
 
       <main>
         <article>
-          <div id="preview">
-            <img src="images/beach.jpg" alt="beach" />
-          </div>
+          <div class="w3-content">
+            
+            <div class="preview-slider-focus">
+              <img class="mySlides" src="images/prev-beach.jpg">
+              <div class="preview-slider-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            </div>
+            <div class="preview-slider-focus">
+              <img class="mySlides" src="images/prev-room.jpg">
+              <div class="preview-slider-desc">
+              Suspendisse mollis et urna non aliquam.
+            </div>
+            </div>
+            <div class="preview-slider-focus">
+              <img class="mySlides" src="images/prev-spa.jpg">
+              <div class="preview-slider-desc">
+              Duis pellentesque arcu ut ex ornare tempus.
+            </div>
+            </div>
+            <div class="preview-slider-focus">
+              <img class="mySlides" src="images/prev-restaurant.jpg">
+              <div class="preview-slider-desc">
+              Praesent id pulvinar sem, nec efficitur mi.
+            </div>
+            </div>
 
+
+            <div class="preview-slider-nav">
+              <div class="preview-slider-nav-img-container">
+                <img class="preview-slider-nav-img" src="images/prev-beach.jpg" onclick="currentDiv(1)">
+              </div>
+              <div class="preview-slider-nav-img-container">
+                <img class="preview-slider-nav-img" src="images/prev-room.jpg" onclick="currentDiv(2)">
+              </div>
+              <div class="preview-slider-nav-img-container">
+                <img class="preview-slider-nav-img" src="images/prev-spa.jpg" onclick="currentDiv(3)">
+              </div>
+              <div class="preview-slider-nav-img-container">
+                <img class="preview-slider-nav-img" src="images/prev-restaurant.jpg" onclick="currentDiv(4)">
+              </div>
+            </div>
+          </div>
+        </article>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var y = document.getElementsByClassName("preview-slider-desc");
+  var dots = document.getElementsByClassName("preview-slider-nav-img");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     y[i].style.display = "none";
+     dots[i].style.opacity = "0.2";
+     dots[i].style.borderBottom = "0";
+  }
+  x[slideIndex-1].style.display = "block";
+  y[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].style.opacity = "1";
+  dots[slideIndex-1].style.borderBottom = "4px solid #C4DDE3";
+}
+</script>
+
+        <article>
           <h2>
             WELCOME
           </h2>
@@ -81,7 +160,6 @@
             </li>
           </ul>
         </div>
-
         <div id="help">
           <h3>
             NEED HELP?
@@ -93,7 +171,9 @@
           </p>
         </div>
       </aside>
+
     </div>
+
     <footer>
       <div id="footer-wrapper">
 
@@ -132,9 +212,6 @@
             Copyright © 2017 Henning Olofsson
             </div>
         </div>
-
-        
-
       </div>
     </footer>
   </body>

@@ -25,6 +25,10 @@ ul {
 	list-style-type: none;	/* inga punkter för ul */
 }
 
+article img, #gallery img {
+	box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
 /***** HEADER/NAVIGATION *****/
 
 header {
@@ -33,7 +37,7 @@ header {
 	border-bottom: 1px solid #ccc;	/* svagt streck för urskiljning */
 	position: fixed;				/* alltid vid toppen av bildskärmen */
 	width: 100%;					/* sträcker sig horizontellt över hela skärmen */
-	z-index: 1;						/* så det ligger främst, pga js slider */
+	z-index: 2;						/* så det ligger främst, pga js slider */
 }
 
 nav {
@@ -43,6 +47,11 @@ nav {
 
 nav img {
 	padding: 12px 30px;	/* padding för loggan */
+	filter: saturate(0.8);
+}
+
+nav img:hover {
+	filter: saturate(5);
 }
 
 nav ul {
@@ -73,25 +82,30 @@ nav li a:hover { /* stil */
 article {
 	width: 595px;
 	margin-bottom: 20px; /* mot footer om det behövs */
-	float: left;
+	display: inline-block;
 }
 
 aside {
+	display: inline-block;
 	float: right;
-	margin-bottom: 20px; /* ifall main är kortare än aside finns det fortfarande margin till footern */
 }
 
 #content {
-	height: 100%;
+	display: block;
 	width: 960px;		/* bredd */
-	margin: 0 auto;		/* centrering */
+	margin: 0 auto 100px auto;		/* centrering */
 	padding-top: 56px;	/* för att komma nedanför header/nav */
 }
 
 #content p {
 	padding: 10px 0;
 	border-radius: 2px;
-	line-height: 1.5em;
+	line-height: 1.7em;
+}
+
+#content p:first-of-type { /* de sista p skapar inte margin nedåt som "krockar" med padding på divar*/
+	margin-top: 0;
+	padding-top: 0;
 }
 
 #content p:last-of-type { /* de sista p skapar inte margin nedåt som "krockar" med padding på divar*/
@@ -105,7 +119,7 @@ form {
 
 form input {
 	margin: 5px 0 20px 0;
-	padding: 7px;
+	padding: 13px;
 	background-color: #f7fdfd;
 	border: 1px solid #ccc;
 	border-radius: 2px;
@@ -121,6 +135,7 @@ form textarea {
 
 form [type="submit"] {
 	margin: 0;
+	background-color: #fff; 
 }
 
 article, #package, #help, #gallery {
@@ -128,27 +143,35 @@ article, #package, #help, #gallery {
 	border-radius: 2px;									/* rundare hörn */
 }
 
-#image-slider {
+#image-slider-container {
 	background-color: #fff;
-	padding: 10px;
-	width: 940px;										/* lika bred som content */
-	height: 400px;										/* höjd */
+	padding: 20px;
+	width: 920px;										/* lika bred som content */
+	height: 150px;										/* höjd */
 	position: relative;
 	margin: 20px 0;										/* utrymme upp och ned */
 	border: 1px solid #f1f1f1;
 	border-radius: 2px;									/* rundare hörn */
 }
 
+#image-slider-container h1 {
+	color: #fff;
+	text-shadow: 0 0 6px rgba(0,0,0,1);
+	font-weight: bold;
+	position: absolute;
+	z-index: 1;
+	margin: 55px 0 0 50px;
+}
+
 #image-slider img {										/* kommer att vara en slider senare */
 	position:absolute;									/* för att de inte ska röra sig när js körs */
-	width: 940px;									/* lika bred som content */
-	height: 400px;										/* höjd */
+	width: 920px;									/* lika bred som content */
+	height: 150px;										/* höjd */
 }
 
 main {
+	display: inline-block;
 	width: 647px;
-	float: left;		/* positionering */
-	margin: 0 0 50px 0; /* positionering */
 }
 
 #preview {
@@ -162,8 +185,11 @@ main {
 
 .room-preview {
 	width: 595px;				/* bredd */
-	float: left;
-	margin-bottom: 30px;
+	margin: 25px 0 25px 0;
+}
+
+.room-preview:first-of-type {
+	margin-top: 15px;
 }
 
 .room-preview:last-of-type {
@@ -172,24 +198,34 @@ main {
 
 .room-preview img {
 	float: left;	/* pos */
-	padding: 12px 20px 15px 0;	/* pos */
-	height: 150px;	/* höjd */
+	margin: 0 25px 10px 0;
+	height: 180px;	/* höjd */
 }
 
-.room-preview span {
+.room-title {
 	font-weight: bold;
 	font-size: 1.1em;
-	margin-bottom: 15px;
 }
 
 .room-preview p {
 	margin-top: 0;
 }
 
+.room-preview a {
+	margin-left: 5px;
+}
+
 #gallery {
 	width: 595px;				/* bredd */
 	padding: 25px;				/* pos */
-	float: left;				/* för att innehåll ska omslutas */
+}
+
+.gallery-row div:first-of-type {	/* dela upp i rader av 3 så att man kan pos mot kanten */
+	margin-left: 0;
+}
+
+.gallery-row div:last-of-type {		/* dela upp i rader av 3 så att man kan pos mot kanten */
+	margin-right: 0;
 }
 
 #gallery, article, #package, #help {	/* bg-färg */
@@ -199,24 +235,23 @@ main {
 
 #gallery img {
 	width: 100%;	/* full bredd av parent div */
-	height: 100px;	/* höjd */
+	height: 120px;	/* höjd */
 }
 
 #gallery h2 {
 	margin: 0 25 30px 25px; /* lite större utrymme */
 }
 
-#gallery p {
-	float: left; 			/* pos/omslutning */
-}
-
 .gallery-img-box {	/* stil och pos */
-	width: 150px;
-	border: 1px solid #ccc;
-	float: left;
-	margin: 23px;
+	width: 165px;
+	display: inline-block;
+	margin: 0 20px 24px 24px;
 	font-size: 0.9em;
 	text-align: center;
+}
+
+.gallery-img-box img {
+	margin-bottom: 10px; /* mer avstånd mellan bild och text */
 }
 
 #package {
@@ -268,6 +303,47 @@ article a, #package a {
 
 #help i {
 	font-weight: bold;
+}
+
+.preview-slider-focus {
+	position: relative;
+}
+
+.preview-slider-desc {
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	background-color: #EAF4F7;
+	padding: 20px;
+	opacity: 0.8;
+}
+
+.preview-slider-nav {
+	margin-top: 10px;
+}
+
+.preview-slider-nav-img-container {
+	float: left;
+	margin-right: 11px;
+	margin-bottom: -10px;
+}
+
+.preview-slider-nav-img-container:last-of-type {
+	margin: 0 0 -10px 0;
+}
+
+.preview-slider-nav-img-container img  {
+	height: 90px;
+	width: 140px;
+}
+
+.preview-slider-nav-img-container img:hover  {
+	opacity: 1!important;	/* !important för att överskrida javascript opacity 0.2 */
+}
+
+.mySlides {
+	width:  595px;
+	height: 400px;
 }
 
 /***** FOOTER *****/
