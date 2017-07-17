@@ -5,23 +5,7 @@
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
-    <script>
-      function openThanks()
-      {
-          window.open("thanks.html", "_blank", "height=500,width=500"); // öppnar thanks.html i ett fönster som är 500x500px
-      }
-    </script>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script>
-      $(function(){
-        $('#image-slider img:gt(0)').hide();
-        setInterval(function(){
-          $('#image-slider :first-child').fadeOut()
-             .next('img').fadeIn()
-             .end().appendTo('#image-slider');}, 
-          3000);
-        });
-    </script>
   </head>
   <body>
 
@@ -59,9 +43,9 @@
           <form onsubmit="return openThanks()"> <!-- när formuläret skickas med submit körs funktionen openThanks -->
             <p> <!-- använder svenska i texten pga krav så det blir konsekvent: postnummer, personnummer  osv. -->
             Förnamn:<br>
-            <input type="text" name="firstn" id="fname" pattern="[A-Za-z]" required><br> <!-- krävs stora eller små bokstäver -->
+            <input type="text" name="firstn" id="fname" pattern="[A-Za-z]{}" required><br> <!-- krävs stora eller små bokstäver, ingen restriktion på längd -->
             Efternamn:<br>
-            <input type="text" name="surn" id="lname" pattern="[A-Za-z]" required><br> <!-- krävs stora eller små bokstäver -->
+            <input type="text" name="surn" id="lname" pattern="[A-Za-z]{}" required><br> <!-- krävs stora eller små bokstäver, ingen restriktion på längd -->
             Mejladress:<br>
             <input type="text" name="email" id="email" pattern="[a-z0-9]+@+[a-z0-9]+\.+[a-z]{2,3}" required><br> <!-- krävs bokstäver eller siffror + snabel-a + bokstäver eller siffror + punkt . två eller tre bokstäver efter punkten -->
             Adress:<br>
@@ -151,5 +135,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function openThanks()
+      {
+          window.open("thanks.html", "_blank", "height=500,width=500"); // öppnar thanks.html i ett fönster som är 500x500px
+      }
+    </script>
+
+    <script>
+      $(function(){
+        $('#image-slider img:gt(0)').hide();
+        setInterval(function(){
+          $('#image-slider :first-child').fadeOut()
+             .next('img').fadeIn()
+             .end().appendTo('#image-slider');}, 
+          3000);
+        });
+    </script>
   </body>
 </html>
