@@ -4,6 +4,7 @@
     <title>Pool Party</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
     <script src="js/jquery-3.2.1.min.js"></script>
   </head>
@@ -11,7 +12,7 @@
   <body>
     <header>
       <nav>
-      <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+      <a href="index.html"><img src="images/logo.png" height="30" width="100" alt="logo" /></a>
         <ul>
           <li><a href="index.html">HOME</a></li>
           <li><a href="rooms-packages.html">ROOMS & PACKAGES</a></li>
@@ -22,71 +23,64 @@
         </ul>
       </nav>
     </header>
-    <div id="content">
 
+    <div id="content">
       <div id="image-slider-container">
         <h1>Gallery</h1>
         <div id="image-slider">
-          <img src="images/turtle.jpg">
-          <img src="images/spa.jpg">
-          <img src="images/angaga.jpg">
-          <img src="images/praslin.jpg">
-          <img src="images/mexico.jpg">
-          <img src="images/room.jpg">
-          <img src="images/maldiverna.jpg">
+          <img src="images/slider-turtle.jpg" height="150" width="920" />
+          <img src="images/slider-angaga.jpg" height="150" width="920" />
+          <img src="images/slider-spa.jpg" height="150" width="920" />
+          <img src="images/slider-praslin.jpg" height="150" width="920" />
+          <img src="images/slider-room.jpg" height="150" width="920" />
+          <img src="images/slider-maldives.jpg" height="150" width="920" />
+          <img src="images/slider-mexico.jpg" height="150" width="920" />
         </div>
       </div>
 
       <main>
         <div id="gallery">
-
           <div class="gallery-row">
             <div class="gallery-img-box">
-              <a href="#"><img src="images/7.jpg" alt="maldives" /></a>
-              <i>Maldives</i>
+              <a href="images/1.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/1-thumb.jpg" height="120" width="165" alt="sea" /></a>
+              <i>Sea</i>
             </div>
-
             <div class="gallery-img-box">
-              <a href="#"><img src="images/1.jpg" alt="swimming pool" /></a>
-              <i>Swimming pool</i>
+              <a href="images/2.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/2-thumb.jpg" height="120" width="165" alt="sharks" /></a>
+              <i>Sharks</i>
             </div>
-
             <div class="gallery-img-box">
-              <a href="#"><img src="images/2.jpg" alt="palm tree" /></a>
-              <i>Palm tree</i>
+              <a href="images/3.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/3-thumb.jpg" height="120" width="165" alt="goose" /></a>
+              <i>Goose</i>
             </div>
           </div>
 
           <div class="gallery-row">
             <div class="gallery-img-box">
-              <a href="#"><img src="images/3.jpg" alt="beach chair" /></a>
-              <i>Beach chair</i>
+              <a href="images/4.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/4-thumb.jpg" height="120" width="165" alt="room" /></a>
+              <i>Room</i>
             </div>
-
             <div class="gallery-img-box">
-              <a href="#"><img src="images/4.jpg" alt="snorkeling" /></a>
+              <a href="images/5.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/5-thumb.jpg" height="120" width="165" alt="snorkeling" /></a>
               <i>Snorkeling</i>
             </div>
-
             <div class="gallery-img-box">
-              <a href="#"><img src="images/5.jpg" alt="beach" /></a>
-              <i>Beach</i>
+              <a href="images/6.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/6-thumb.jpg" height="120" width="165" alt="paddle board" /></a>
+              <i>Paddle board</i>
             </div>
           </div>
 
           <div class="gallery-row">
             <div class="gallery-img-box">
-              <a href="#"><img src="images/6.jpg" alt="coral" /></a>
-              <i>Coral</i>
+              <a href="images/7.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/7-thumb.jpg" height="120" width="165" alt="at night" /></a>
+              <i>At night</i>
             </div>
-
             <div class="gallery-img-box">
-              <a href="#"><img src="images/7.jpg" alt="lagoon" /></a>
-              <i>Lagoon</i>
+              <a href="images/8.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/8-thumb.jpg" height="120" width="165" alt="pool" /></a>
+              <i>Pool</i>
             </div>
-
             <div class="gallery-img-box">
-              <a href="#"><img src="images/8.jpg" alt="coral reef" /></a>
+              <a href="images/9.jpg" data-lightbox="image-1" data-title="Gallery"><img src="images/9-thumb.jpg" height="120" width="165" alt="coral reef" /></a>
               <i>Coral reef</i>
             </div>
           </div>
@@ -104,16 +98,16 @@
             PACKAGE DEALS
           </h3>
           <ul>
-            <li><img src="images/room1.jpg" alt="room1" />
+            <li><img src="images/package-1-thumb.jpg" height="150" width="250" alt="package 1" />
               <p>
                 <span>€500 - Package deal 1</span><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="rooms-packages.html#package-deals">READ MORE »</a>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="package-1.html">READ MORE »</a>
               </p>
             </li>
-            <li><img src="images/room2.jpg" alt="room2" />
+            <li><img src="images/package-2-thumb.jpg" height="150" width="250" alt="package 2" />
               <p>
                 <span>€800 - Package deal 2</span><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="rooms-packages.html#package-deals">READ MORE »</a>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="package-2.html">READ MORE »</a>
               </p>
             </li>
           </ul>
@@ -129,13 +123,11 @@
             <i>+46 123 456 789</i>
           </p>
         </div>
-
       </aside>
 
     </div>
     <footer>
       <div id="footer-wrapper">
-
         <div id="footer-links">
           <p>LINKS</p>
           <ul>
@@ -158,7 +150,7 @@
 
         <div id="footer-map">
           <p>MAP</p>
-          <a target="_blank" href="https://www.google.se/maps/place/Vuxenutbildning+Sundsvall+-+Timr%C3%A5/@62.406771,17.312073,15z/data=!4m5!3m4!1s0x0:0x3e286cfb787c865e!8m2!3d62.406771!4d17.312073"><img src="images/map.png" alt="map"></a>
+          <a target="_blank" href="https://www.google.se/maps/place/Vuxenutbildning+Sundsvall+-+Timr%C3%A5/@62.406771,17.312073,15z/data=!4m5!3m4!1s0x0:0x3e286cfb787c865e!8m2!3d62.406771!4d17.312073"><img src="images/map.png" height="150" width="150" alt="map"></a>
         </div>
 
         <div id="footer-social-media">
@@ -184,5 +176,7 @@
           3000);
         });
     </script>
+
+    <script src="js/lightbox.js"></script>
   </body>
 </html>

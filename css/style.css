@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html, body {
 	height: 100%;	/* 100% höjd för att hela sidan ska stretchas ned oavsett pixeldensitet/skärmstorlek */
     width: 100%;	/* för att strecka horizontellt över hela skärmen, content centreras med margin */
@@ -6,7 +8,8 @@ html, body {
 }
 
 body {
-	font-family: Helvetica, Arial;
+	font-family: Roboto, Helvetica, Arial;
+	color: #4b4b4b;
 	background-image: url(../images/crossword.png); /* bakgrund tagen från sublepatterns.com */
 }
 
@@ -15,7 +18,12 @@ a {
 	color: #91B8C3;			/* färg för icke specifierade länkar */
 }
 
+h1 {
+	font-size: 36px;
+}
+
 h2, h3 {
+	color: #232323;
 	padding-bottom: 10px;				/* skapar mer utrymme för headings taggarna */
 	margin-top: 0;						/* för att funka med padding för många divar */
 	border-bottom: 1px solid #65979b;	/* lite mer tydlig/strukturerad som heading */
@@ -23,10 +31,6 @@ h2, h3 {
 
 ul {
 	list-style-type: none;	/* inga punkter för ul */
-}
-
-article img, #gallery img {
-	box-shadow: 0 2px 4px rgba(0,0,0,0.18);
 }
 
 /***** HEADER/NAVIGATION *****/
@@ -85,6 +89,14 @@ article {
 	display: inline-block;
 }
 
+article a {
+	margin-left: 5px;
+}
+
+article img, #gallery img, #package img {
+	box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
 aside {
 	display: inline-block;
 	float: right;
@@ -93,14 +105,15 @@ aside {
 #content {
 	display: block;
 	width: 960px;		/* bredd */
-	margin: 0 auto 100px auto;		/* centrering */
+	margin: 0 auto 50px auto;		/* centrering */
 	padding-top: 56px;	/* för att komma nedanför header/nav */
+	min-height: 1150px;
 }
 
 #content p {
 	padding: 10px 0;
 	border-radius: 2px;
-	line-height: 1.7em;
+	line-height: 1.6em;
 }
 
 #content p:first-of-type { /* de sista p skapar inte margin nedåt som "krockar" med padding på divar*/
@@ -165,13 +178,34 @@ article, #package, #help, #gallery {
 
 #image-slider img {										/* kommer att vara en slider senare */
 	position:absolute;									/* för att de inte ska röra sig när js körs */
-	width: 920px;									/* lika bred som content */
-	height: 150px;										/* höjd */
 }
 
 main {
 	display: inline-block;
 	width: 647px;
+}
+
+#nav-sub {
+	padding: 10px 20px;
+	background-color: #fff;
+	border: 1px solid #f1f1f1;
+	margin: 0 0 10px 0;
+	font-size: 0.85em;
+}
+
+#nav-sub a {
+	text-decoration: underline;
+}
+
+.info-title {
+	display: inline;
+	line-height: 1.6em;
+}
+
+.info-title span {
+	font-weight: bold;
+	line-height: 1.8em;
+	font-size: 1.1em;
 }
 
 #preview {
@@ -183,13 +217,12 @@ main {
 	width: 100%;	/* å bild inte sträcker utanför */
 }
 
-.room-preview {
-	width: 595px;				/* bredd */
-	margin: 25px 0 25px 0;
+.image-margin {
+	margin-bottom: 15px;
 }
 
-.room-preview:first-of-type {
-	margin-top: 15px;
+.room-preview {
+	margin: 25px 0 60px 0;
 }
 
 .room-preview:last-of-type {
@@ -197,22 +230,35 @@ main {
 }
 
 .room-preview img {
-	float: left;	/* pos */
-	margin: 0 25px 10px 0;
 	height: 180px;	/* höjd */
 }
 
 .room-title {
 	font-weight: bold;
-	font-size: 1.1em;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #232323;
 }
 
 .room-preview p {
 	margin-top: 0;
 }
 
-.room-preview a {
-	margin-left: 5px;
+.package-preview {
+	margin: 25px 0 35px 0;
+}
+
+.package-preview:last-of-type {
+	margin: 0;
+}
+
+.package-preview img {
+	margin-bottom: 5px;
+}
+
+.room-preview img, .package-preview img {
+	float: left;	/* pos */
+	margin-right: 22px;
 }
 
 #gallery {
@@ -288,12 +334,13 @@ article a, #package a {
 #package p {
 	margin-top: 0;
 	padding: 10px 0;
-	line-height: 1.5em;		/* gånger 1.5 vanlig radavstånd */
 }
 
 #package span {
+	color: #232323;
 	font-weight: bold;
 	font-size: 1.1em;
+	line-height: 2em;
 	margin-bottom: 15px;
 }
 
@@ -339,9 +386,10 @@ article a, #package a {
 
 .preview-slider-nav-img-container img:hover  {
 	opacity: 1!important;	/* !important för att överskrida javascript opacity 0.2 */
+	transition: .3s ease;
 }
 
-.mySlides {
+.slides {
 	width:  595px;
 	height: 400px;
 }
@@ -354,7 +402,6 @@ footer { /* stil */
 	background-color: #f4f9f9;
 	font-size: 0.9em;
 	line-height: 2em;
-	color: #424242;
 	display: table-row; /* för pos/hålla sig på botten */
 	border-top: 1px solid #e3f1f2;
 }
