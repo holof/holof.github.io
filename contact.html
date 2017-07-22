@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pool Party</title>
+    <title>Pool Party Hotel - Contact Us</title>
+    <meta name="description" content="Pool Party Hotel always wants to hear feedback from our beloved customers, therefore we urge you to contact us if you've got any questions.">
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
 
@@ -26,13 +28,13 @@
       <div id="image-slider-container">
         <h1>Contact Us</h1>
         <div id="image-slider">
-          <img src="images/slider-spa.jpg" height="150" width="920" />
-          <img src="images/slider-angaga.jpg" height="150" width="920" />
-          <img src="images/slider-mexico.jpg" height="150" width="920" />
-          <img src="images/slider-praslin.jpg" height="150" width="920" />
-          <img src="images/slider-maldives.jpg" height="150" width="920" />
-          <img src="images/slider-room.jpg" height="150" width="920" />
-          <img src="images/slider-turtle.jpg" height="150" width="920" />
+          <img src="images/slider-spa.jpg" height="150" width="920" alt="spa" />
+          <img src="images/slider-angaga.jpg" height="150" width="920" alt="angaga" />
+          <img src="images/slider-mexico.jpg" height="150" width="920" alt="mexico" />
+          <img src="images/slider-praslin.jpg" height="150" width="920" alt="praslin" />
+          <img src="images/slider-maldives.jpg" height="150" width="920" alt="maldives" />
+          <img src="images/slider-room.jpg" height="150" width="920" alt="room" />
+          <img src="images/slider-turtle.jpg" height="150" width="920" alt="turtle" />
         </div>
       </div>
 
@@ -49,9 +51,9 @@
             Adress:<br>
             <input type="text" name="address" id="address" pattern="[A-Za-z]+(\s?)+([0-9]{1,3})+[A-Za-z]?" required><br> <!-- krävs minst en stor eller liten bokstav + blanksteg(valfritt) + mellan en och tre siffror för gatunr + eventuell gatusiffra(valfritt)-->
             Postnummer:<br>
-            <input type="text" name="postnr" id="postnr" placeholder="12345" pattern="\d{3}\s?\d{2}" required><br> <!-- krävs fem siffror i rad eller tre siffror + blanksteg(valfritt) + två siffror -->
+            <input type="text" name="postnr" id="postnr" placeholder="12345" pattern="\d{3}\s?\d{2}" maxlength="6" required style="width: 40px;"><br> <!-- krävs fem siffror i rad eller tre siffror + blanksteg(valfritt) + två siffror -->
             Personnummer:<br>
-            <input type="text" name="personnr" id="personnr" placeholder="ååmmddnnnn" pattern="\d{6}-?\d{4}" required><br> <!-- krävs sex siffror + bindessträck(valfritt) + fyra siffror -->
+            <input type="text" name="personnr" id="personnr" placeholder="ååmmddnnnn" pattern="\d{6}-?\d{4}" maxlength="11" required style="width: 80px;"><br> <!-- krävs sex siffror + bindessträck(valfritt) + fyra siffror -->
             Meddelande:<br>
             <textarea cols="50" rows="10"></textarea><br>
             <input type="submit" name="submit" value="Send">
