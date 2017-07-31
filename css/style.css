@@ -124,7 +124,7 @@ aside {
 #content {
 	display: block;
 	margin: 0 auto 50px auto;		/* centrering */
-	min-height: 1150px;
+	min-height: 1140px;
 	padding-top: 56px;	/* för att komma nedanför header/nav */
 	width: 960px;		/* bredd */
 }
