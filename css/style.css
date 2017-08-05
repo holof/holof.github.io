@@ -109,10 +109,7 @@ article, #gallery, #help, #package, #img-preview {
 	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
 	border-radius: 2px;				/* rundare hörn */
 	padding: 25px;					/* padding */
-}
-
-article, #gallery, #help, #package, section {	/* bg-färg */
-	background-color: #fff;	
+	background-color: #fff;			/* bg-färg */
 	border: 1px solid #f1f1f1;
 }
 
