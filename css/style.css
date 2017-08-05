@@ -255,6 +255,21 @@ form [type="submit"] {
 	line-height: 1.8em;
 }
 
+.info-title button {
+	-moz-border-radius: 2px;
+	background-color: #e3f1f2;
+	border: 1px solid #f1f1f1;
+	font-weight: bold;
+	margin-top: 25px;
+	padding: 10px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.info-title button:hover {
+	background-color: #91B8C3;
+}
+
 main {
 	display: inline-block;
 	width: 647px;
