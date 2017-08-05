@@ -89,6 +89,13 @@ article {
 	width: 595px;
 }
 
+
+section {
+	display: inline-block;
+	margin-bottom: 20px;		/* mot footer om det behövs */
+	width: 595px;
+}
+
 article a {
 	margin-left: 5px;
 }
@@ -98,20 +105,20 @@ article a, #package a {
 	font-weight: bold;
 }
 
-article img, #gallery img, #package img {
+article img, #gallery img, #package img, section img {
 	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.18);		/* Behövs för firefox version 3.5-4.0 */
 	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.18);		/* Behövs för chrome version 4.0-10.0 och Safari version 3.1-5.1 */
 	box-shadow: 0 2px 4px rgba(0,0,0,0.18);
 }
 
-article, #package, #help, #gallery {
+article, #gallery, #help, #package, section {
 	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
 	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
 	border-radius: 2px;				/* rundare hörn */
 	padding: 25px;					/* padding */
 }
 
-article, #gallery, #package, #help {	/* bg-färg */
+article, #gallery, #help, #package, section {	/* bg-färg */
 	background-color: #fff;	
 	border: 1px solid #f1f1f1;
 }
