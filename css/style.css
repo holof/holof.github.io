@@ -98,18 +98,21 @@ article a, #package a {
 	font-weight: bold;
 }
 
-article img, #gallery img, #package img, #img-preview img {
+article img, #gallery img, #package img {
 	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.18);		/* Behövs för firefox version 3.5-4.0 */
 	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.18);		/* Behövs för chrome version 4.0-10.0 och Safari version 3.1-5.1 */
 	box-shadow: 0 2px 4px rgba(0,0,0,0.18);
 }
 
-article, #gallery, #help, #package, #img-preview {
+article, #package, #help, #gallery {
 	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
 	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
 	border-radius: 2px;				/* rundare hörn */
 	padding: 25px;					/* padding */
-	background-color: #fff;			/* bg-färg */
+}
+
+article, #gallery, #package, #help {	/* bg-färg */
+	background-color: #fff;	
 	border: 1px solid #f1f1f1;
 }
 
@@ -121,7 +124,7 @@ aside {
 #content {
 	display: block;
 	margin: 0 auto 50px auto;		/* centrering */
-	min-height: 1140px;
+	min-height: 1150px;
 	padding-top: 56px;	/* för att komma nedanför header/nav */
 	width: 960px;		/* bredd */
 }
@@ -149,32 +152,28 @@ form {
 }
 
 form input {
+	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
+	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
+	background-color: #f7fdfd;
+	border-radius: 2px;
+	border: 1px solid #ccc;
 	margin: 5px 0 20px 0;
 	padding: 13px;
 }
 
 form textarea {
-	margin: 10px 0 0 0;
-	padding: 7px;
-}
-
-form input, form textarea, form [type="submit"] {
 	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
 	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
 	background-color: #f7fdfd;
 	border-radius: 2px;
-	border: 1px solid #f1f1f1;
+	border: 1px solid #ccc;
+	margin: 10px 0 0 0;
+	padding: 7px;
 }
 
 form [type="submit"] {
-	font-weight: bold;
-	margin-top: 25px;
-	margin: 15px 0 0 0;
-	padding: 10px;
-}
-
-form [type="submit"]:hover {
-	background-color: #91B8C3;
+	background-color: #fff; 
+	margin: 0;
 }
 
 #gallery {
@@ -245,12 +244,6 @@ form [type="submit"]:hover {
 	z-index: 1;
 }
 
-#img-preview {
-	display: inline-block;
-	margin-bottom: 20px;		/* mot footer om det behövs */
-	width: 595px;
-}
-
 .info-title {	/* små-rubriker till info */
 	display: inline;
 	line-height: 1.6em;
@@ -260,22 +253,6 @@ form [type="submit"]:hover {
 	font-size: 1.1em;
 	font-weight: bold;
 	line-height: 1.8em;
-}
-
-.info-title button {
-	width: 595px;
-	-moz-border-radius: 2px;
-	background-color: #f7fdfd;
-	border: 1px solid #f1f1f1;
-	font-weight: bold;
-	margin-bottom: 10px;
-	padding: 10px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-}
-
-.info-title button:hover {
-	background-color: #91B8C3;
 }
 
 main {
