@@ -1,0 +1,532 @@
+html, body {
+	display: table;	/* för att få vertikal uppställning med element som har dynamisk höjd */
+	height: 100%;	/* 100% höjd för att hela sidan ska stretchas ned oavsett pixeldensitet/skärmstorlek */
+    width: 100%;	/* för att strecka horizontellt över hela skärmen, content centreras med margin */
+}
+
+body {
+	background-image: url(../images/crossword.png); /* bakgrund tagen från sublepatterns.com */
+	color: #4b4b4b;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+a {
+	color: #91B8C3;			/* färg för icke specifierade länkar */
+	text-decoration: none;	/* ingen text-decoration för icke specifierade länkar */
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2, h3 {
+	border-bottom: 1px solid #65979b;	/* lite mer tydlig/strukturerad som heading */
+	color: #232323;
+	margin-top: 0;						/* för att funka med padding för många divar */
+	padding-bottom: 10px;				/* skapar mer utrymme för headings taggarna */
+}
+
+ul {
+	list-style-type: none;	/* inga punkter för ul */
+}
+
+/***** HEADER/NAVIGATION *****/
+
+header {
+	background-color: #fff;			/* vit bg-färg*/
+	border-bottom: 1px solid #ccc;	/* svagt streck för urskiljning */
+	height: 55px;					/* höjd på header/nav */
+	position: fixed;				/* alltid vid toppen av bildskärmen */
+	width: 100%;					/* sträcker sig horizontellt över hela skärmen */
+	z-index: 2;						/* så det ligger främst, pga js slider */
+}
+
+nav {
+	margin: auto;	/* centrerad */
+	width: 960px;	/* bredd på header/nav */
+}
+
+nav img {
+	-webkit-filter: saturate(0.8);	/* Behövs för chrome version 18.0-53.0 och Safari version 6.0-9.1 och Opera 15.0-40.0 */
+	filter: saturate(0.8);
+	padding: 12px 30px;	/* padding för loggan */
+}
+
+nav img:hover {
+	-webkit-filter: saturate(5);	/* Behövs för chrome version 18.0-53.0 och Safari version 6.0-9.1 och Opera 15.0-40.0 */
+	filter: saturate(5);
+}
+
+nav li {
+	float: left;		/* positionering */
+	font-size: 12px;	/* stil */
+	font-weight: bold;	/* stil */
+	margin-top: 20px; 	/* positionering */
+}
+
+nav li a {
+	margin-left: -5px; /* Minska avståndet mellan länkarna i navigationen så att det är "cross-over" och något alltid är klickbart */
+	padding: 20px 15px; /* För att skapa större klick-area på länkarna så att man inte måste vara precis på texten */
+}
+
+nav li a:hover {		/* stil */
+	background-color: #f4f9f9;
+	border-bottom: 3px solid #65979b;
+	color: #C4DDE3;
+}
+
+nav ul {
+	float: right;	/* hålla sig till höger sida */
+	margin: 0;		/* för positionering */
+}
+
+/***** CONTENT *****/
+
+article {
+	display: inline-block;
+	margin-bottom: 20px;		/* mot footer om det behövs */
+	width: 595px;
+}
+
+article a {
+	margin-left: 5px;
+}
+
+article a, #package a {
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+article img, #gallery img, #package img, #img-preview img {
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.18);		/* Behövs för firefox version 3.5-4.0 */
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.18);		/* Behövs för chrome version 4.0-10.0 och Safari version 3.1-5.1 */
+	box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+article, #gallery, #help, #package, #img-preview {
+	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
+	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
+	border-radius: 2px;				/* rundare hörn */
+	padding: 25px;					/* padding */
+	background-color: #fff;			/* bg-färg */
+	border: 1px solid #f1f1f1;
+}
+
+aside {
+	display: inline-block;
+	float: right;
+}
+
+#content {
+	display: block;
+	margin: 0 auto 50px auto;		/* centrering */
+	min-height: 1140px;
+	padding-top: 56px;	/* för att komma nedanför header/nav */
+	width: 960px;		/* bredd */
+}
+
+#content p {
+	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
+	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
+	border-radius: 2px;
+	line-height: 1.6em;
+	padding: 10px 0;
+}
+
+#content p:first-of-type {		/* de sista p skapar inte margin nedåt som "krockar" med padding på divar*/
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#content p:last-of-type {		/* de sista p skapar inte margin nedåt som "krockar" med padding på divar*/
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+form {
+	font-weight: bold;
+}
+
+form input {
+	margin: 5px 0 20px 0;
+	padding: 13px;
+}
+
+form textarea {
+	margin: 10px 0 0 0;
+	padding: 7px;
+}
+
+form input, form textarea, form [type="submit"] {
+	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
+	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
+	background-color: #f7fdfd;
+	border-radius: 2px;
+	border: 1px solid #f1f1f1;
+}
+
+form [type="submit"] {
+	font-weight: bold;
+	margin-top: 25px;
+	margin: 15px 0 0 0;
+	padding: 10px;
+}
+
+form [type="submit"]:hover {
+	background-color: #91B8C3;
+}
+
+#gallery {
+	padding: 25px;				/* pos */
+	width: 595px;				/* bredd */
+}
+
+#gallery img {
+	height: 120px;	/* höjd */
+	width: 100%;	/* full bredd av parent div */
+}
+
+.gallery-img-box {	/* stil och pos */
+	display: inline-block;
+	font-size: 0.9em;
+	margin: 0 20px 24px 24px;
+	text-align: center;
+	width: 165px;
+}
+
+.gallery-img-box img {
+	margin-bottom: 10px; /* mer avstånd mellan bild och text */
+}
+
+.gallery-row div:first-of-type {	/* dela upp i rader av 3 så att man kan pos mot kanten */
+	margin-left: 0;
+}
+
+.gallery-row div:last-of-type {		/* dela upp i rader av 3 så att man kan pos mot kanten */
+	margin-right: 0;
+}
+
+#help {
+	width: 250px;
+}
+
+#help i {
+	font-weight: bold;
+}
+
+.image-margin {		/* justering mellan bild och text för undersidorna */
+	margin-bottom: 15px;
+}
+
+#image-slider img {										/* kommer att vara en slider senare */
+	position:absolute;									/* för att de inte ska röra sig när js körs */
+}
+
+#image-slider-container {
+	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
+	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
+	background-color: #fff;
+	border-radius: 2px;				/* rundare hörn */
+	border: 1px solid #f1f1f1;
+	height: 150px;					/* höjd */
+	margin: 20px 0;					/* utrymme upp och ned */
+	padding: 20px;
+	position: relative;
+	width: 920px;					/* lika bred som content */
+}
+
+#image-slider-container h1 {
+	color: #fff;
+	font-weight: bold;
+	margin: 55px 0 0 50px;
+	position: absolute;
+	text-shadow: 0 0 6px rgba(0,0,0,1);
+	z-index: 1;
+}
+
+#img-preview {
+	display: inline-block;
+	margin-bottom: 20px;		/* mot footer om det behövs */
+	width: 595px;
+}
+
+.info-title {	/* små-rubriker till info */
+	display: inline;
+	line-height: 1.6em;
+}
+
+.info-title span {
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 1.8em;
+}
+
+.info-title button {
+	width: 595px;
+	-moz-border-radius: 2px;
+	background-color: #f7fdfd;
+	border: 1px solid #f1f1f1;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 10px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.info-title button:hover {
+	background-color: #91B8C3;
+}
+
+main {
+	display: inline-block;
+	width: 647px;
+}
+
+#nav-sub {	/* brödsmulor */
+	background-color: #fff;
+	border: 1px solid #f1f1f1;
+	font-size: 0.85em;
+	margin: 0 0 10px 0;
+	padding: 10px 20px;
+}
+
+#nav-sub a {
+	text-decoration: underline;
+}
+
+#package {		/* package deals på sidan i aside */
+	margin-bottom: 20px; /*justering av pos med #help */
+	width: 250px;
+}
+
+#package img {
+	-moz-border-radius: 2px;		/* Krävs för firefox version 3.0-4.0 */
+	-webkit-border-radius: 2px;		/* Krävs för chrome version 4.0-5.0 och Safari 3.1-5.0 */
+	border-radius: 2px;
+	height: 150px;
+	width: 100%;		/* full bredd av parent div */
+}
+
+#package li {
+	margin: 10px 0 25px 0; /* pos */
+	padding: 0;
+	width: 250px;
+}
+
+#package li:last-of-type, #package p:last-of-type {
+	margin-bottom: 0;
+}
+
+#package p {
+	margin-top: 0;
+	padding: 10px 0;
+}
+
+#package span {
+	color: #232323;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 2em;
+	margin-bottom: 15px;
+}
+
+#package ul {
+	margin: 0;	/* justering pos */
+	padding: 0;	/* justering pos */
+}
+
+.package-preview {
+	margin: 25px 0 35px 0;
+}
+
+.package-preview:last-of-type {
+	margin: 0;
+}
+
+.package-preview img {
+	margin-bottom: 5px;
+}
+
+#preview {
+	margin-bottom: 30px;		/* pos */
+	width: 595px;				/* bredd */
+}
+
+#preview img {		/* ska vara som en image slider fast med kontroll och bilder och länkar till rum */
+	width: 100%;	/* å bild inte sträcker utanför */
+}
+
+.preview-slider-desc {
+	background-color: #EAF4F7;
+	bottom: 50px;
+	left: 0;
+	opacity: 0.8;
+	padding: 20px;
+	position: absolute;
+}
+
+.preview-slider-focus {
+	position: relative;
+}
+
+.preview-slider-nav {
+	margin-top: 10px;
+}
+
+.preview-slider-nav-img-container {
+	float: left;
+	margin-bottom: -10px;
+	margin-right: 11px;
+}
+
+.preview-slider-nav-img-container:last-of-type {
+	margin: 0 0 -10px 0;
+}
+
+.preview-slider-nav-img-container img  {
+	height: 90px;
+	width: 140px;
+}
+
+.preview-slider-nav-img-container img:hover  {
+	opacity: 1!important;			/* !important för att överskrida javascript opacity 0.2 */
+	transition: .3s ease;
+	-webkit-transition: .3s ease; 	/* behövs för chrome version 4.0-26.0 och safari 3.1-6.1 */
+	-moz-transition: .3s ease;		/* behövs för firefox version 4.0-16.0 */
+	-o-transition: .3s ease;		/* behövs för opera version 10.5-12.1 */
+
+}
+
+.room-preview {		/* lite info innan man går in i undersidorna */
+	margin: 25px 0 60px 0;
+}
+
+.room-preview:last-of-type {
+	margin-bottom: 0;
+}
+
+.room-preview p {
+	margin-top: 0;
+}
+
+.room-preview img {
+	height: 180px;	/* höjd */
+}
+
+.room-preview img, .package-preview img {
+	float: left;	/* pos */
+	margin-right: 22px;
+}
+
+.room-title {		/* rubrik i .room-preview */
+	color: #232323;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.slides {
+	height: 400px;
+	width:  595px;
+}
+
+/***** FOOTER *****/
+
+footer { /* stil */
+	background-color: #f4f9f9;
+	border-top: 1px solid #e3f1f2;
+	display: table-row; /* för pos/hålla sig på botten */
+	font-size: 0.9em;
+	line-height: 2em;
+	position: absolute;
+	width: 100%;
+}
+
+footer li a { /* stil */
+	color: #848484;
+}
+
+footer p {
+	font-weight: bold;
+	margin-top: 0; /* För att lättare kunna positionera utan paragrafens automatiska värde av margin uppåt */
+}
+
+footer ul { /* pos */
+	margin: 0;
+	padding: 0;
+}
+
+#footer-copyright {
+	margin-top: 15px; /* pos */
+}
+
+#footer-links, #footer-contact, #footer-map, #footer-social-media {
+	float: left; /* För att divarna ska ordnas i rätt höjd och avstånd */
+	padding: 0 40px;
+}
+
+#footer-map img {
+	border: 1px solid #ccc;
+	height: 120px;
+	width: 120px;
+}
+
+#footer-map, #footer-social-media {
+	text-align: center;	/* centrera copyright texten */
+}
+
+#footer-social-media img { /* pos */
+	height: 50px;
+	margin: 10px 5px;
+	width: 50px;
+}
+
+#footer-wrapper { 		/* funkar som nav elementet fast längst ned*/
+	margin: 0 auto; 	/* centrering */
+	overflow: hidden; 	/* För att få "child-divarna" att omslutas av denna div pga float:left i dem */
+	padding: 20px;
+	width: 940px;
+}
+
+/* --------------------------------------------------------------
+
+   reset.css
+   * Resets default browser CSS.
+
+-------------------------------------------------------------- */
+
+html {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+body {
+	margin: 0;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+/* float:none prevents the span-x classes from breaking table-cell display */
+caption, th, td {
+  float:none !important;
+  font-weight: normal;
+  text-align: left;
+}
+table, th, td {
+  vertical-align: middle;
+}
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* Remember to define your own focus styles! */
+:focus { outline: 0; }

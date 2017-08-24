@@ -1,221 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Pool Party Hotel - Tropical hotel</title>
-    <meta name="description" content="Welcome to Pool Party Hotel. In this hotel people gather from all over the globe to have some well deserved rest in this tropical paradise.">
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  </head>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+	<title>Henning Olofsson - Portfolio</title>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="">H<span>OLOF</span></a>
+		</div>
 
-  <body>
+		<nav>
+			<ul>
+				<li><a href="#">Om</a></li>
+				<li><a href="#web">Web</a></li>
+				<li><a href="#foto">Foto</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <header>
-      <nav>
-      <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="rooms-packages.html">ROOMS & PACKAGES</a></li>
-          <li><a href="services.html">SERVICES</a></li>
-          <li><a href="gallery.html">GALLERY</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+	<div class="wrapper">
+		<div class="box1">
+			<img src="images/henning.jpg" width="100%">
+		</div>
+		<div class="box2">
+			<section>
+				<h1>Om mig</h1>
+			</section>
+			<section>
+				<p>
+					Hej jag heter Henning Olofsson och är 22 år. Jag har ett intresse inom data och har därför som mål att jobba inom detta i min framtida arbetskarriär.
+				</p>
+				<p>
+					Eftersom jag tycker om både det estetiska och det tekniska så har jag märkt att jag tycker att det är roligt med webbutveckling. Jag har pysslat med att göra hemsidor på fritiden och har genom detta intresse lärt mig att använda HTML och CSS. Jag har även kommit in på grunderna av språk som JavaScript och Python vilket jag nu håller på att lära mig på fritiden.
+				</p>
+				<p>
+					Fotografering är också ett intresse som jag har vilket även det ger en blandning av estetik och teknik eftersom efter att jag har tagit bilderna, redigerar dem i program som Adobe Lightroom och Photoshop i datorn.
+				</p>
+			</section>
+		</div>
+		<div class="box3" id="web">
+		</div>
+		<div class="box4">
+			<section>
+				<h1>Web</h1>
+			</section>
+			<section>
+				<p>
+					Webbutveckling är något som jag tycket är väldigt intressant att hålla på med. Det roligaste med webbutvecklingen tycker jag är att man ständigt lär sig nya saker som man sedan kan tillämpa för att göra sina hemsidor bättre.
+				</p>
+				<p>
+					Jag gjorde nyligen klar en kurs i webbutveckling där jag under kursens gång byggde en hemsida. På bilden till höger ser du hur den ser ut och efter denna text finns det en länk till den riktiga navigerbara hemsidan.
+				</p>
+				<div class="links">
+					<p>
+						<a href="pool-party-hotel/index.html" target="_blank"><i>Länk till hemsida</i></a>
+					</p>
+				</div>
+			</section>
+		</div>
+		<div class="box5">
+			<img src="images/pool-party-hotel.png" width="374px" height="731px">
+		</div>
+		<div class="box6" id="foto">
+		</div>
+		<div class="box7">
+			<img src="images/norrsken.jpg" width="778px" height="521px">
+		</div>
+		<div class="box8">
+			<section>
+				<h1>Fotografi</h1>
+			</section>
+			<section>
+				<p>
+					Jag har alltid tyckt om konst och design vare sig det är inom arkitektur, webben, målning eller inredning. Det var nog därför jag snöade in mig när jag började lära mig om fotografering i början av 2016.
+				</p>
+				<p>
+					Sedan dess har jag lärt mig mycket, men fortsätter att lära mig nya saker hela tiden. Nedan är en länk till ett galleri på hemsidan Flickr där man kan se en massa bilder som jag har tagit.
+				</p>
+				<div class="links">
+					<p>
+						<img src="images/flickr.png" width="15px">
+						<a href="https://www.flickr.com/gp/henningolofsson/5te79u" target="_blank"><i>Länk till galleri på Flickr</i></a>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
 
-    <div id="content">
-      <div id="image-slider-container">
-        <h1>Welcome to our hotel!</h1>
-        <div id="image-slider">
-          <img src="images/slider-praslin.jpg" height="144" width="920" alt="praslin" />
-          <img src="images/slider-room.jpg" height="144" width="920" alt="room" />
-          <img src="images/slider-maldives.jpg" height="144" width="920" alt="maldives" />
-          <img src="images/slider-spa.jpg" height="144" width="920" alt="spa" />
-          <img src="images/slider-mexico.jpg" height="144" width="920" alt="mexico" />
-          <img src="images/slider-angaga.jpg" height="144" width="920" alt="angaga" />
-          <img src="images/slider-turtle.jpg" height="144" width="920" alt="turtle" />
-        </div>
-      </div>
-
-      <main>
-        <div id="img-preview">
-          <div class="preview-slider-focus">
-            <img class="slides" src="images/beach.jpg" height="400" width="595" alt="beach" />
-            <div class="preview-slider-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </div>
-          </div>
-          <div class="preview-slider-focus">
-            <img class="slides" src="images/room.jpg" height="400" width="595" alt="room" />
-            <div class="preview-slider-desc">
-            Suspendisse mollis et urna non aliquam.
-            </div>
-          </div>
-          <div class="preview-slider-focus">
-            <img class="slides" src="images/spa.jpg" height="400" width="595" alt="spa" />
-            <div class="preview-slider-desc">
-            Duis pellentesque arcu ut ex ornare tempus.
-            </div>
-          </div>
-          <div class="preview-slider-focus">
-            <img class="slides" src="images/restaurant.jpg" height="400" width="595" alt="restaurant" />
-            <div class="preview-slider-desc">
-            Praesent id pulvinar sem, nec efficitur mi.
-            </div>
-          </div>
-
-
-          <div class="preview-slider-nav">
-            <div class="preview-slider-nav-img-container">
-              <img class="preview-slider-nav-img" src="images/beach-thumb.jpg" height="94" width="140" alt="beach" onclick="currentDiv(1)" />
-            </div>
-            <div class="preview-slider-nav-img-container">
-              <img class="preview-slider-nav-img" src="images/room-thumb.jpg" height="94" width="140" alt="room" onclick="currentDiv(2)" />
-            </div>
-            <div class="preview-slider-nav-img-container">
-              <img class="preview-slider-nav-img" src="images/spa-thumb.jpg" height="94" width="140" alt="spa" onclick="currentDiv(3)" />
-            </div>
-            <div class="preview-slider-nav-img-container">
-              <img class="preview-slider-nav-img" src="images/restaurant-thumb.jpg" height="94" width="140" alt="restaurant" onclick="currentDiv(4)" />
-            </div>
-          </div>
-        </div>
-
-        <article>
-          <h2>
-            WELCOME
-          </h2>
-
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis et urna non aliquam. Duis pellentesque arcu ut ex ornare tempus. Praesent id pulvinar sem, nec efficitur mi. Suspendisse vitae erat eget enim mollis rutrum. Pellentesque vehicula condimentum ipsum, ac varius leo hendrerit nec. Phasellus tristique, turpis eu pellentesque viverra, metus nunc fermentum nulla, a vehicula ante libero vitae elit. Integer ex leo, interdum vel lacus in, ornare mollis ipsum. Maecenas in tempus nisi, in volutpat orci. Duis finibus lectus at eleifend tempor. Integer accumsan tellus vel ultricies efficitur.
-          </p>
-          <p>
-          Proin ultrices feugiat maximus. Morbi ullamcorper congue nunc, in sollicitudin risus ultrices at. Suspendisse aliquet mauris id lorem mattis dignissim. Nam sollicitudin odio metus, a sagittis magna tempor non. Mauris malesuada risus vitae mauris volutpat tempor. Suspendisse potenti. Curabitur et libero et ante placerat finibus. Ut vehicula, libero non sodales sagittis, orci erat scelerisque nisl, quis congue arcu tortor sit amet diam. Aliquam et odio interdum, ultrices ipsum sit amet, iaculis justo. Curabitur finibus, dui ut interdum dignissim, purus urna venenatis felis, nec tristique risus sem eget magna. Suspendisse potenti. Duis aliquam nisl dolor, ut porta ipsum condimentum eget. In congue aliquet ex sit amet pretium.
-          </p>
-        </article>
-      </main>
-
-      <aside>
-        <div id="package">
-          <h3>
-            PACKAGE DEALS
-          </h3>
-          <ul>
-            <li><img src="images/package-1-thumb.jpg" height="150" width="250" alt="package 1" />
-              <p>
-                <span>€500 - Package deal 1</span><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="package-1.html">READ MORE »</a>
-              </p>
-            </li>
-            <li><img src="images/package-2-thumb.jpg" height="150" width="250" alt="package 2" />
-              <p>
-                <span>€800 - Package deal 2</span><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><a href="package-2.html">READ MORE »</a>
-              </p>
-            </li>
-          </ul>
-        </div>
-        
-        <div id="help">
-          <h3>
-            NEED HELP?
-          </h3>
-          <p>
-            Call this number for customer support:
-            <br>
-            <i>+46 123 456 789</i>
-          </p>
-        </div>
-      </aside>
-
-    </div>
-
-    <footer>
-      <div id="footer-wrapper">
-
-        <div id="footer-links">
-          <p>LINKS</p>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-
-        <div id="footer-contact">
-          <p>CONTACT</p>
-          <ul>
-            <li>Lasarettsvägen 19</li>
-            <li>856 43, Sundsvall</li>
-            <li>Västernorrland, SWEDEN</li>
-            <li>Tel: +46 123 456 789</li>
-          </ul>
-        </div>
-
-        <div id="footer-map">
-          <p>MAP</p>
-          <a target="_blank" href="https://www.google.se/maps/place/Vuxenutbildning+Sundsvall+-+Timr%C3%A5/@62.406771,17.312073,15z/data=!4m5!3m4!1s0x0:0x3e286cfb787c865e!8m2!3d62.406771!4d17.312073"><img src="images/map.jpg" height="150" width="150" alt="map"></a>
-        </div>
-
-        <div id="footer-social-media">
-          <p>SOCIAL MEDIA</p>
-          <a href="#"><img src="images/twitter.png" alt="twitter"></a>
-          <a href="#"><img src="images/facebook.png" alt="facebook"></a>
-          <a href="#"><img src="images/youtube.png" alt="youtube"></a>
-          <a href="#"><img src="images/instagram.png" alt="instagram"></a>
-            <div id="footer-copyright">
-            Copyright © 2017 Henning Olofsson
-            </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/jquery-3.2.1.min.js"></script>
-
-    <script>
-      var slideIndex = 1;
-      showDivs(slideIndex);
-
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
-
-      function currentDiv(n) {
-        showDivs(slideIndex = n);
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("slides");
-        var y = document.getElementsByClassName("preview-slider-desc");
-        var dots = document.getElementsByClassName("preview-slider-nav-img");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-           y[i].style.display = "none";
-           dots[i].style.opacity = "0.2";
-           dots[i].style.borderBottom = "0";
-        }
-        x[slideIndex-1].style.display = "block";
-        y[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].style.opacity = "1";
-        dots[slideIndex-1].style.borderBottom = "4px solid #C4DDE3";
-      }
-    </script>
-
-    <script>
-      $(function(){
-        $('#image-slider img:gt(0)').hide();
-        setInterval(function(){
-          $('#image-slider :first-child').fadeOut()
-             .next('img').fadeIn()
-             .end().appendTo('#image-slider');}, 
-          3000);
-        });
-    </script>
-  </body>
+	<footer>
+		<section>
+			<p>
+				&copy; 2017 Henning Olofsson <span>&verbar;</span> Kontakt: <a href="mailto:olofsson.henning@gmail.com" target="_blank"><i>olofsson.henning@gmail.com</i></a>
+			</p>
+		</section>
+	</footer>
+</body>
 </html>
