@@ -14,9 +14,7 @@ body {
 
 .box3, .box6 {
 	background-image: url(../images/break.svg);
-	background-repeat: no-repeat;
-	text-align: center;
-    background-position: center;
+
 }
 
 .box3 {
