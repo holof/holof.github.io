@@ -18,6 +18,8 @@ body {
 	text-align: center;
     background-position: center;*/
     text-align: center;
+    user-drag: none; 
+	user-select: none;
 }
 
 .box5 {
