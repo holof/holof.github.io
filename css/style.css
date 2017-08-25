@@ -9,7 +9,7 @@ body {
 }
 
 .box2, .box3, .box4, .box6, .box8 {
-	padding: 0 10px;
+	padding: 0 15px;
 }
 
 .box3, .box6 {
@@ -17,9 +17,9 @@ body {
 	background-repeat: no-repeat;
 	text-align: center;
     background-position: center;*/
+	user-select: none;
     text-align: center;
     user-drag: none; 
-	user-select: none;
 }
 
 .box5 {
@@ -57,6 +57,7 @@ h1 {
 	font-size: 36px;
 	font-weight: 300;
 	margin: 0;
+	text-align: center;
 }
 
 header {
@@ -180,6 +181,10 @@ nav ul {
 
 	.box8 {
 		grid-column: 3/4;
+	}
+
+	h1 {
+		text-align: left;
 	}
 
 	header {
