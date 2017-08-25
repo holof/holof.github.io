@@ -13,7 +13,11 @@ body {
 }
 
 .box3, .box6 {
-	
+	/*background-image: url(../images/break.svg);
+	background-repeat: no-repeat;
+	text-align: center;
+    background-position: center;*/
+    text-align: center;
 }
 
 .box5 {
@@ -156,7 +160,7 @@ nav ul {
 	}
 
 	.box3, .box6 {
-		background-image: url(../images/break.svg);
+		/*background-image: url(../images/break.svg);*/
 		background-repeat: no-repeat;
 		grid-column: 1/4;
 		text-align: center;
