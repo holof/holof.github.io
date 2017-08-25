@@ -19,6 +19,14 @@ body {
     background-position: center;
 }
 
+.box3 {
+	grid-row: 3/4;
+}
+
+.box6 {
+	grid-row: 6/7;
+}
+
 .box5 {
 	text-align: center;
 }
@@ -166,17 +174,17 @@ nav ul {
 	    background-position: center;
 	}
 
-	.box4 {
+	.box3, .box6 {
+		grid-row: auto;
+	}
+
+	.box4, .box7 {
 		grid-column: 1/3;
 	}
 
 	.box5 {
 		grid-column: 3/4;
 		text-align: center;
-	}
-
-	.box7 {
-		grid-column: 1/3;
 	}
 
 	.box8 {
