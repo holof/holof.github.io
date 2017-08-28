@@ -13,13 +13,7 @@ body {
 }
 
 .box3, .box6 {
-	/*background-image: url(../images/break.svg);
-	background-repeat: no-repeat;
-	text-align: center;
-    background-position: center;*/
-	user-select: none;
-    text-align: center;
-    user-drag: none; 
+    text-align: center; 
 }
 
 .box5 {
@@ -68,6 +62,10 @@ hr {
 	background: transparent url(../images/hr.svg) no-repeat scroll center;
 	border: none;
 	height: 100px;
+}
+
+img {
+	user-select: none;
 }
 
 .links {
@@ -151,9 +149,8 @@ nav ul {
 	
 }
 
-/* JUSTERINGAR FÖR ICKE-MOBILER */
+/* JUSTERINGAR FÖR ICKE-MOBILA ENHETER */
 @media (min-width: 1200px) {
-
 	.box1 {
 		grid-column: 1/2;
 	}
@@ -163,7 +160,6 @@ nav ul {
 	}
 
 	.box3, .box6 {
-		/*background-image: url(../images/break.svg);*/
 		background-repeat: no-repeat;
 		grid-column: 1/4;
 		text-align: center;
@@ -211,5 +207,4 @@ nav ul {
 		padding: 200px 0 200px 0;
 		width: 1200px;
 	}
-
 }
